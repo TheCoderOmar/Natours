@@ -7,6 +7,12 @@
   color: #fff;
 }
 
+.mapPopup {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.4rem;
+}
+
 ::selection {
   background-color: #55c57a;
   color: #fff;

@@ -21,6 +21,15 @@ app.set("views", path.join(__dirname, "views"));
 //security HTTP
 app.use(helmet());
 
+//to use maps
+app.use((req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    "style-src 'self' https://unpkg.com https://fonts.googleapis.com;",
+  );
+  return next();
+});
+
 //development
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
