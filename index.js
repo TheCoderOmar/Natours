@@ -12,6 +12,7 @@ const tourRouter = require("./routes/tourRouter");
 const userRouter = require("./routes/userRouter");
 const reviewRouter = require("./routes/reviewRouter");
 const viewRouter = require("./routes/viewRouter");
+const cookieParser = require("cookie-parser");
 const { whitelist } = require("validator");
 const app = express();
 app.set("view engine", "pug");
@@ -50,7 +51,7 @@ app.use(
     limit: "10kb",
   }),
 );
-
+app.use(cookieParser());
 //data sanatization NOSQL
 app.use(mongoSanitize());
 
