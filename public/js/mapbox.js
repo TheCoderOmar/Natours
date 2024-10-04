@@ -1,5 +1,3 @@
-console.log("hello");
-
 export const displayMap = (locations) => {
   const map = L.map("map", { zoomControl: false });
 
