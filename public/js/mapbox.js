@@ -1,4 +1,4 @@
-export const displayMap = (locations) => {
+const displayMap = (locations) => {
   const map = L.map("map", { zoomControl: false });
 
   L.tileLayer(

@@ -6,13 +6,14 @@ const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
+const cookieParser = require("cookie-parser");
+
 const AppError = require("./utils/apiError");
 const globalError = require("./controllers/errorController");
 const tourRouter = require("./routes/tourRouter");
 const userRouter = require("./routes/userRouter");
 const reviewRouter = require("./routes/reviewRouter");
 const viewRouter = require("./routes/viewRouter");
-const cookieParser = require("cookie-parser");
 const { whitelist } = require("validator");
 const app = express();
 app.set("view engine", "pug");
